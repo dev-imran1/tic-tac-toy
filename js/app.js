@@ -15,5 +15,15 @@ let winPatterns = [
     [2,4,6]
 ]
 
-
-console.log(boxes.length==9)
+boxes.forEach((item)=>{
+    item.addEventListener("click", ()=>{
+        if (turn0) {
+            item.innerHTML = "0";
+            turn0 = false
+        }else{
+            item.innerHTML = "X";
+            turn0 = true
+        }
+        item.disabled = true
+    })
+})
